@@ -1,0 +1,64 @@
+<h3 class="text-center">Edite um Veiculo</h3>
+<div>
+    <br/>
+    <br/>
+<div class="row ">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+        <div [hidden]="submitted" style="width: 400px" class="m-auto margin-form">
+            <form [formGroup]="veiculoForm" (submit)="update()">
+                <div class="form-group">
+                    <label for="placa">Placa</label>
+                    <input type="text" class="form-control" formControlName="placa" data-toggle="tooltip" [(ngModel)]="veiculo!.placa"
+                        data-placement="right" title="Digite a placa do veiculo" name="Placa" />
+                    <div class="alert alert-danger" *ngIf="veiculoForm.get('placa')?.touched && veiculoForm.get('placa')?.invalid" style="margin-top: 5px">
+                        <span *ngIf="veiculoForm.get('placa')?.errors?.['required']">Placa do veículo é obrigatória!</span>
+                        <span *ngIf="veiculoForm.get('placa')?.errors?.['minlength']">
+                            A placa do veículo deve ter no mínimo 2 caracteres
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="cor">Cor</label>
+                    <input type="text" class="form-control" formControlName="cor" data-toggle="tooltip" [(ngModel)]="veiculo!.cor"
+                        data-placement="right" title="Digite a cor do veiculo" name="cor" />
+                    <div class="alert alert-danger" *ngIf="veiculoForm.get('cor')?.touched && veiculoForm.get('cor')?.invalid" style="margin-top: 5px">
+                        <span *ngIf="veiculoForm.get('cor')?.errors?.['required']">Cor obrigatória!</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="anoModelo">Ano</label>
+                    <input type="text" class="form-control" formControlName="anoModelo" data-toggle="tooltip" [(ngModel)]="veiculo!.anoModelo"
+                        data-placement="right" title="Digite o ano do veiculo" name="anoModelo" />
+                    <div class="alert alert-danger" *ngIf="veiculoForm.get('anoModelo')?.touched && veiculoForm.get('anoModelo')?.invalid" style="margin-top: 5px">
+                        <span *ngIf="veiculoForm.get('anoModelo')?.errors?.['required']">Ano obrigatória!</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="marca">Marca</label>
+                    <select class="form-control" formControlName="marca" data-toggle="tooltip" name="marca" 
+                            data-placement="right" title="Selecione a marca" [(ngModel)]="veiculo!.marca" [compareWith]="compareMarcas">
+                        <option [ngValue]="marca" *ngFor="let marca of marcas">
+                            {{marca.sigla}}
+                        </option>
+                    </select>
+                </div>
+                <br />
+                <button type="submit" class="btn btn-success">Editar</button>
+            </form>
+        </div>
+    </div>
+    <div class="col-sm-4"></div>
+</div>
+<div class="row">
+    <div class="col-sm-4 text-center"></div>
+    <div class="col-sm-4 text-center">
+        <div [hidden]="!submitted">
+            <h5 class="text-success text-center">Veículo editado com sucesso</h5>
+            <!-- <button (click)="editVeiculoForm()" class='btnbtn-primary'>Cadastrar mais Veiculos</button> -->
+            <a class="btn btn-primary" href="novo-veiculo">Listar Veículos</a>
+
+        </div>
+    </div>
+    <div class="col-sm-4 text-center"></div>
+</div> 

@@ -1,0 +1,62 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
+
+
+body{
+    background-color: rgb(131, 136, 136);
+}
+
+.add-new-marca{
+    text-align: center;
+    left: 16%;
+    bottom: -100px;
+    width: 30%;
+    height:320px;
+    background-color: rgb(50, 116, 222);
+    border-radius: 20px;
+    color: white;
+}
+
+.add-new-veiculo{
+    text-align: center;
+    color: white;
+    left: 50%;
+    top: -240px;
+    width: 30%;
+    height:320px;
+    background-color: rgb(50, 116, 222);
+    label: {
+        text-align: left;
+    }
+    border-radius: 20px;
+}
+
+.module-acess{
+    div{
+        position: relative;
+        margin-bottom: 18px;
+    }
+    border-radius: 1px solid black;
+}
+
+.button-save{background-color: rgb(50, 116, 222);
+    color: white;
+    width: 70px;
+    height: 30px;
+}
+
+.input-text-area{
+    width: 80%;
+    height: 100px;
+}
+
+.input-normal-string{
+    width: 80%;
+    height: 30px;
+}
+
+
+.veiculos-cadastrados{
+    margin-top: 50px;
+}

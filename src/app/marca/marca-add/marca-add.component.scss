@@ -1,0 +1,25 @@
+.center-element{
+    padding-left: 5%;
+    align-items: center
+    
+}
+
+
+.last-child-modify{
+    tr > th:last-child {
+        text-align: right;
+        padding-right: 8%;
+    }
+}
+
+.last-child-button{
+    text-align: right;
+    padding-right: 5%;
+}
+
+
+.margin-form{
+    margin: auto;
+    width: 40%;
+    height: 400px;
+}

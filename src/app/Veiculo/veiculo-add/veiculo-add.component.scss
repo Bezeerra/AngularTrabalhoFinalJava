@@ -1,0 +1,50 @@
+body{
+    background-color: red;
+    display: flex; /* Define o elemento pai como um container flexível */
+    justify-content: center;
+}
+
+.table {
+    margin: 0 auto; /* Centraliza a tabela horizontalmente */
+}
+
+.panel-body {
+    display: flex; /* Define o elemento pai como um container flexível */
+    justify-content: center; /* Centraliza os elementos filhos verticalmente */
+}
+
+.center-element{
+    padding-left: 5%;
+    align-items: right;
+}
+
+.last-child-modify{
+    tr > th:last-child {
+        text-align: right;
+        padding-right: 8%;
+    }
+}
+
+.last-child-button{
+    text-align: right;
+    padding-right: 5%;
+}
+
+.margin-form{
+    margin: auto;
+    width: 40%;
+    height: 400px;
+}
+
+.center-button {
+    display: flex; /* Define o elemento como um container flexível */
+    justify-content: center; /* Centraliza o elemento horizontalmente */
+}
+
+label {
+    display: inline-block; /* Alinha a label para a esquerda */
+}
+
+.placalabel {
+    text-align: left; /* Alinha o texto da label para a esquerda */
+}
